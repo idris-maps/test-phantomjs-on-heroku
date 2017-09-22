@@ -1,8 +1,10 @@
 const express = require('express')
 const pdf = require('html-pdf')
-
+const cors = require('cors'
+)
 const app = express()
 app.use(require('body-parser').json())
+app.use(cors())
 
 app.get('/', (req, res, next) => res.send({ msg: 'hello' }))
 
